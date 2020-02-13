@@ -14,7 +14,7 @@
       function init() {
         a = Tabletop({
             key: public_spreadsheet_url_1,
-            callback: showInfo,
+            callback: drawMenu,
             simpleSheet: true
         });
         //b = Tabletop({
@@ -26,15 +26,16 @@
 
       var count = 0;
 
-      function showInfo(data, tabletop) {
+      function drawMenu(data, tabletop) {
+        console.log(data);
         // data comes through as a simple array since simpleSheet is turned on
         var div = document.getElementById('data'),
-            html, prop, i;
+            html = "<div class='menu'><ul><li>", prop, i;
         for(i = 0; i < data.length; i++) {
           for(prop in data[i]) {
-            html = html + "&nbsp;-&nbsp;" + data[i][prop];
+            html = html + data[i][prop];
           }
-          html = html + "<hr><br>";
+          html = html + "</li></div>";
         }
         div.innerHTML = div.innerHTML + html;
       }
