@@ -32,7 +32,7 @@
         var div = document.getElementById('data'),
             html = "<div class='menu'><ul><li>", prop, i;
         for(i = 0; i < data.length; i++) {
-          html += <a href='data[i].MenuItemUrl'>data[i].MenuItemName</a></li>;          
+          html += "<a href='" + data[i].MenuItemUrl + "'>" + data[i].MenuItemName + "</a></li>";          
         }
         div.innerHTML = div.innerHTML + html + "</ul></div>";
       }
