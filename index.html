@@ -32,12 +32,9 @@
         var div = document.getElementById('data'),
             html = "<div class='menu'><ul><li>", prop, i;
         for(i = 0; i < data.length; i++) {
-          for(prop in data[i]) {
-            html = html + data[i][prop];
-          }
-          html = html + "</li></div>";
+          html += <a href='data[i].MenuItemUrl'>data[i].MenuItemName</a></li>;          
         }
-        div.innerHTML = div.innerHTML + html;
+        div.innerHTML = div.innerHTML + html + "</ul></div>";
       }
 
       window.addEventListener('DOMContentLoaded', init)
