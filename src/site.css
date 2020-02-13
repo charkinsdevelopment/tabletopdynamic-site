@@ -1,0 +1,14 @@
+.menu li {
+    width: 170px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+    margin: 3px;
+    padding: 18px;
+}
+.menu a {
+  text-decoration:none;
+  color:#000;
+}
